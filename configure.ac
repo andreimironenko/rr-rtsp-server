@@ -35,7 +35,8 @@ AC_SUBST(GSTREAMER_LIBS)
 dnl Now we're ready to ask for gst-rtsp
 PKG_CHECK_MODULES(RTSP, gst-rtsp-server-0.10  >= 0.10.8 , HAVE_RTSP=yes, HAVE_RTSP=no)
 
-dnl Give error and exit if we don't have directfb
+dnl Give error and exit if we dont have directfb
+
 if test "x$HAVE_RTSP" = "xno"; then
   AC_MSG_ERROR([you need gst-rtsp-server development packages installed >= 0.10.8 !])
 fi
